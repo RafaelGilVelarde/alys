@@ -38,6 +38,7 @@ public class ClickSpawn : MonoBehaviour
         GameObject Aux = Instantiate(Prefab);
         Aux.transform.position = ClickLocation;
         gameObject.SetActive(false);
+        XRManager.XRInstance.Current = Aux.GetComponent<XRInteractable>();
     }
     private void OnEnable()
     {
